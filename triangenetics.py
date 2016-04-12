@@ -109,10 +109,19 @@ class Organism:
     kill_rate = 0.3
     gene_split_rate = 0.3
 
-    # Apply k-means clustering over two organisms to
-    # find similar high density fitness areas
-    # fitness chunks done in groups
-    # variable length genes
+    """ 
+    Ideas
+    Fitness:
+        - number of overlapping triangles
+        avg area of triangle - setpoint
+
+
+    Apply k-means clustering over two organisms to
+    find similar high density fitness areas
+    fitness chunks done in groups
+    variable length genes
+
+    """
 
     mutables = {'chromosome_length': float,
                 'mutation_rate': float,

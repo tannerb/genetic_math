@@ -7,10 +7,10 @@ from random import getrandbits, randint, randrange, sample
 from sys import maxsize
 
 
-def split_str(string: str, n: int):
-    while string:
-        yield string[:n]
-        string = string[n:]
+def split_list(xs: list, n: int):
+    while xs:
+        yield xs[:n]
+        xs = xs[n:]
 
 
 def get_rand_chromosome(bits: int):
@@ -86,7 +86,7 @@ class Organism:
 
     def _decode(self):
         ops = []
-        for gene in split_str(self.bits, 4):
+        for gene in split_list(self.bits, 4):
             try:
                 ops.append(self.gene_pool[gene])
             except KeyError:
