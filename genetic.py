@@ -26,14 +26,9 @@ class Genotype:
         self.max_population = 2000
 
 
-class Tournament:
-    tourney_size = 10
-    num_victors = 4
-
-
 @total_ordering
 class Organism:
-    from .graycode import graycode
+    from graycode import graycode
     gene_pool = dict(zip(graycode(4), [
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, add,
         sub, mul, truediv, pow, xor]))
